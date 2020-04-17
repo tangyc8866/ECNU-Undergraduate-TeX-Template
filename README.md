@@ -1,15 +1,15 @@
 # ECNU-Undergraduate-TeX-Template
 华东师范大学本科生毕业论文TeX模板
 
-### 概述
+### 1. 概述
 
-本模板参照了袁轶君（Yijun Yuan）的TeX模板修改而成，参见[link](https://github.com/YijunYuan/ECNU-Undergraduate-LaTeX)
+本模板基于ECNU-本科毕业论文TeX模板进行定制, 突出文学化统计编程给论文写作带来的便利. TeX模板参照了袁轶君（Yijun Yuan）的TeX模板修改而成，参见[link](https://github.com/YijunYuan/ECNU-Undergraduate-LaTeX)
 
-参考文献采用biblatex进行管理，后台biber (而不是传统的bibtex!),文献库采用满足国家标准GB/T7714-2015的[biblatex样式包](https://github.com/hushidong/biblatex-gb7714-2015)，参见[hushidong](https://github.com/hushidong)详细介绍。
+参考文献采用biblatex进行管理，后台biber (而不是传统的bibtex!),文献库采用满足国家标准GB/T7714-2015的[胡振震-biblatex样式包](https://github.com/hushidong/biblatex-gb7714-2015)，参见[hushidong](https://github.com/hushidong)详细介绍。
 
 本模板基于book文档类构建，有许多个小文件组成。本模板提倡模块化的论文写作方式。所有tex文件，最终都会汇入到`main.tex`中进行编译。
 
-### 各文件作用
+### 2. 各文件作用
 
 #### `main.tex`
 
@@ -19,10 +19,13 @@
 
 这个文件用来载入宏包并进行各种格式设置。简而言之，请不要轻易修改，删除本文件中的任何内容，特别是不要修改宏包的加载顺序，除非你真的知道你在做什么。这真的非常重要！！！！！！！
 
-#### `paper_info.tex`
+#### `~\preface\paper_info.tex`
 
 本文件中定义了各种论文的基本信息，如作者名称，完成日期，中英文关键词等，需要你自己填写修改。
 
+#### `biber-test.tex`
+
+这是一个biblatex的测试文件，涉及的`reference`目录中的二个bib文件. 建议使用本模板时先熟悉bib文献库的编写文件，并作测试
 
 #### `~\preface\inner-cover.tex`
 
@@ -57,7 +60,7 @@
 
 存放了所有的参考文献条码。本模板使用的biblatex系统可以处理多bib文件，我们建议你把所有条目都放在refs.bib文件中, 它列举了许多不同类型的文献类型。biber支持导入多个文献库。
 
-### 使用方法与编译环境
+### 3. 使用方法与编译环境
 
 我们强烈推荐使用TeXstudio进行论文编写。
 
@@ -74,7 +77,7 @@ xelatex main.tex
 
 是的没错，xelatex指令一共要执行三次。最后的产物就是`main.pdf`。
 
-### 打印模式（新！）
+### 4. 打印模式（新！）
 
 由于最后打印纸质版论文需要调整单面/双面等事项，比较麻烦，所以本模板提供了一个非常易用的开关来控制是否需要启动打印模式。
 
@@ -83,6 +86,8 @@ xelatex main.tex
 当然在使用电子版论文时，这样的空页与layout的调整是没有必要的。此时我们只要将这行命令注释以后重新编译即可。
 
 
-### 其他
+### 5. 其他
 
 相信使用这份模板的人并不都精通TeX系统，甚至连作者自己也算不上精通，所以有些问题也需要慢慢摸索修改。
+
+
